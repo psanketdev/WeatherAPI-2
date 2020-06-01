@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/def.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main > h2 {
+  padding: 25px 0 20px;
+  background: -webkit-linear-gradient(to right, #11998e, #38ef7d); /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #11998e, #38ef7d); */
+  text-align: center;
+  font-size: 35px;
+  font-weight: 1000;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+main form { text-align: center;}
+
+main form input {
+  width: 32%;
+  padding: 10px 0 10px 10px;
+  border: 1px solid #11998e;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+}
+
+main form input::placeholder {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+main form button {
+  padding: 8px 25px;
+  border: 1px solid;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #11998e;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  outline: none;
+  transition: all .5s linear;
+}
+
+main form button:hover {
+  background-color: #fff;
+  color: #11998e;
+}
+
+main .result .activeDisplay {
+  width: 30%;
+  margin: 50px auto 0;
+  background-color: rgba(0,0,0,.25);
+  box-sizing: border-box;
+  box-shadow: 1px 1px 7px #000;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+main .result .activeDisplay article {padding: 50px;} 
+
+main .result .activeDisplay h3 {
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main .result .activeDisplay h3 + span {
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+main .result .activeDisplay span:nth-of-type(2) {
+  padding-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+main .result .activeDisplay ul {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+main .result .activeDisplay ul li:nth-child(1) {
+  width: 38%;
+  display: inline-block;
+  /* margin-right: 25px; */
+}
+
+main .result .activeDisplay ul li:nth-child(2) {
+  width: 60%;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+main .result .activeDisplay span:nth-of-type(3) {
+  padding-bottom: 10px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+main .result .activeDisplay span:nth-of-type(4) {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+
+
+
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
